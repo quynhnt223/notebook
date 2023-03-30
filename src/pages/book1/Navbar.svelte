@@ -175,9 +175,7 @@ a{
 .navbar.active {
     display: block!important;
 }
-body{
-    background-color: #fff!important;
-}
+
 }
 .open-nav{
     position: fixed;

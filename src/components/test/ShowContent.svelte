@@ -186,6 +186,7 @@ font-weight: 300;
     padding: 0;
 }
 @media only screen and (max-width: 600px) {
+   
 .content-wrap{
     left:0;
     padding: 0px!important;

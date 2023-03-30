@@ -83,3 +83,8 @@ button:focus {
 	
 	.active .navbar {display: block!important;}
 	}
+@media only screen and (max-width: 600px) {
+	body{
+	background-color: #fff!important;
+}
+}
