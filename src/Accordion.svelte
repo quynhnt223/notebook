@@ -1,10 +1,9 @@
 <script>    
-
+    import { afterPageLoad } from "@roxi/routify"
     export let open = false;      
       const handleClick = () => open = !open
-      export function clickme()  {
-        alert("hello")
-    }
+    
+  
   </script>
   
   <div class="accordion">
@@ -71,6 +70,9 @@
       .plus {
     display: flex;
     align-items: center;
+}
+@media only screen and (max-width: 600px) {
+.content .accordion .details{padding: 0!important;padding-top: 12px!important;}
 }
   </style>
   

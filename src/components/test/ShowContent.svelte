@@ -185,4 +185,31 @@ font-weight: 300;
 .details {
     padding: 0;
 }
+@media only screen and (max-width: 600px) {
+.content-wrap{
+    left:0;
+    padding: 0px!important;
+}
+.content-header {
+    left: 0;
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+.content {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 68px;
+}
+.title{
+    width: 100%!important;
+    text-align: center!important;
+   
+}
+
+:global(body) {
+    overflow: hidden!important;
+}
+}
 </style>

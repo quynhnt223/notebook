@@ -3,26 +3,27 @@
     import Accordion from "../../Accordion.svelte";    
     import Note from "../../components/icons/Note.svelte";
     import Content from "./Content.svelte";
-    let active = true;
+    let active = false;
     import { url } from '@roxi/routify'
 
     
-    
+   
 </script>
-<div class="navbar">
+<button on:click="{() => active = !active}" class="open-nav"></button>
+<div class:active={active} class="navbar">
 <Accordion><!-- 1 -->
     <div slot="head"><span class="hn">01</span><span>Project Init</span></div>
     <div slot="details">    
-        <a href="/book1/1"><Note/> Creating An App</a>
-        <a href="/book1/2"><Note/> Add Manifest file</a>
-        <a href="/book1/3"><Note/> Add App icons files</a>
-        <a href="/book1/4"><Note/> Service-worker.js File</a>
-        <a href="/book1/5"><Note/> Deploy to Firebase Hosting</a>
-        <a href="/book1/6"><Note/> Command errors</a>
-        <a href="/book1/7"><Note/> Deploy to Netlify</a>
-        <a href="/book1/8"><Note/> Setup Git</a>
-        <a href="/book1/9"><Note/> Don't tell me i am wrong</a>
-        <a href="/book1/10"><Note/> Don't tell me i am wrong</a>
+        <a on:click="{() => active = false}" href="/book1/1"><Note/> Creating An App</a>
+        <a on:click="{() => active = false}" href="/book1/2"><Note/> Add Manifest file</a>
+        <a on:click="{() => active = false}" href="/book1/3"><Note/> Add App icons files</a>
+        <a on:click="{() => active = false}" href="/book1/4"><Note/> Service-worker.js File</a>
+        <a on:click="{() => active = false}" href="/book1/5"><Note/> Deploy to Firebase Hosting</a>
+        <a on:click="{() => active = false}" href="/book1/6"><Note/> Command errors</a>
+        <a on:click="{() => active = false}" href="/book1/7"><Note/> Deploy to Netlify</a>
+        <a on:click="{() => active = false}" href="/book1/8"><Note/> Setup Git</a>
+        <a on:click="{() => active = false}" href="/book1/9"><Note/> Don't tell me i am wrong</a>
+        <a on:click="{() => active = false}" href="/book1/10"><Note/> Don't tell me i am wrong</a>
     </div>
 </Accordion>
 <Accordion><!-- 2 -->
@@ -165,6 +166,32 @@ a{
     font-weight: 300;
 }
 @media only screen and (max-width: 600px) {
-    .navbar {display: none;z-index: 99999999;}
+.navbar {
+    display: none;
+    z-index: 99999999;
+    width: calc(100% - 20px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.navbar.active {
+    display: block!important;
+}
+}
+.open-nav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width:36px;
+    height: 36px;
+    z-index: 9999999999;
+    border-bottom-left-radius: 100px;
+    border: none!important;
+    outline:none!important;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.open-nav:focus, open-nav:active{
+    outline: none;
+    border: none;
+}
+
+
 </style>

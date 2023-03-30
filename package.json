@@ -9,7 +9,8 @@
         "build": "run-s build:*",
         "build:routify": "routify -b",
         "build:vite": "vite build",
-        "deploy": "npm run build & firebase deploy"
+        "deploy": "npm run build & firebase deploy",
+        "dp": "npm run build & git add. & git commit & git push -u origin master"
     },
     "devDependencies": {
         "@roxi/routify": "^2.18.8",

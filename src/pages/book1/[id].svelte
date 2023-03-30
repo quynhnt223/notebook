@@ -9,7 +9,8 @@
     import Accordion from '../../Accordion.svelte';
     import EditContent from '../../components/test/EditContent.svelte';
     import ShowContent from '../../components/test/ShowContent.svelte';
-    
+
+  
 
     let active = true;
 	const handleClickmobile = () => display = !display;
@@ -72,77 +73,11 @@ $afterPageLoad(page => {
         })
     })
 </script>
-    <div  class:active={!active}><Navbar/></div>
-
-<button  class="savebtn" on:click={adddoc} on:click={close}>Save</button>
-<div class="textarea">
-    <textarea id="input1" bind:value={item} ></textarea>    
-    </div>
-
-
-
-
+<div  class:active={!active}><Navbar/></div>
 <ShowContent/>
 <EditContent/>
+
 <style>
-.savebtn{display: none;z-index: 999999;}
-#input1 {
-    display: none;
-}
-button {
-    position: absolute;
-    right: 24px;
-    top: 108px;
-    z-index: 99;
-}
-
-textarea {
-    position: fixed;
-    top: 104px;
-    bottom: 0;
-    left: 298px;
-    right: 12px;    
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 6px;
-    background-color: #fff;
-    font-size: 16px;
-    resize: none;
-    overflow: auto;
-    border: none;
-    z-index: 9999;
-    
-}
-
-input {
-border: none;
-width: 100%;
-text-align: center;
-}
-input:focus {
-    outline: none;
-}
-body{overflow: hidden;}
-@media only screen and (max-width: 600px) {
-.content-wrap{
-    left:0;
-}
-.content-header {
-    left: 0;
-    top: 0;
-    right: 0;
-    border-radius: 0;
-    box-shadow: none;
-}
-
-textarea {
-left: 12px;
-}
-:global(body) {
-    overflow: hidden!important;
-}
-}
 :global(body) {
     overscroll-behavior: contain;
 }
