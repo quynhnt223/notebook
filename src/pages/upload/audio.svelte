@@ -16,12 +16,7 @@
     
 
     
-    const currentDate = uuidv4();
-    const storageRef = ref(storage, "audios/" + currentDate + ".mp3");
-    const metadata = {
-        contentType: 'audio/mp3; codecs=opus',
-        };
-    
+
 
 
     function save() {
@@ -36,6 +31,8 @@
 
    function clickme() {
     console.log(file instanceof File);
+    const currentDate = uuidv4();
+    const storageRef = ref(storage, "audios/" + currentDate + ".mp3");
     
     const uploadTask = uploadBytesResumable(storageRef, me);
 // logs: true
