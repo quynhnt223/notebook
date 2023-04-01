@@ -41,23 +41,50 @@
     </div>
 </Accordion>
 <Accordion><!-- 4 -->
-    <div slot="head"><span class="hn">04</span><span>Project Init</span></div>
+    <div slot="head"><span class="hn">04</span><span>Accordion</span></div>
 	<div slot="details">
-
+        <a on:click="{() => active = false}" href="/book1/4-1"><Note/> Creating An App</a>
+        <a on:click="{() => active = false}" href="/book1/4-2"><Note/> Add Manifest file</a>
+        <a on:click="{() => active = false}" href="/book1/4-3"><Note/> Add App icons files</a>
+        <a on:click="{() => active = false}" href="/book1/4-4"><Note/> Service-worker.js File</a>
+        <a on:click="{() => active = false}" href="/book1/4-5"><Note/> Deploy to Firebase Hosting</a>
+        <a on:click="{() => active = false}" href="/book1/4-6"><Note/> Command errors</a>
+        <a on:click="{() => active = false}" href="/book1/4-7"><Note/> Deploy to Netlify</a>
+        <a on:click="{() => active = false}" href="/book1/4-8"><Note/> Setup Git</a>
+        <a on:click="{() => active = false}" href="/book1/4-9"><Note/> Don't tell me i am wrong</a>
+        <a on:click="{() => active = false}" href="/book1/4-10"><Note/> Don't tell me i am wrong</a>
        
     </div>
 </Accordion>
 <Accordion><!-- 5 -->
-    <div slot="head"><span class="hn">05</span><span>Project Init</span></div>
+    <div slot="head"><span class="hn">05</span><span>Fix Errors</span></div>
 	<div slot="details">
-
+        <a on:click="{() => active = false}" href="/book1/5-1"><Note/> Fix undefined values</a>
+        <a on:click="{() => active = false}" href="/book1/5-2"><Note/> Add Manifest file</a>
+        <a on:click="{() => active = false}" href="/book1/5-3"><Note/> Add App icons files</a>
+        <a on:click="{() => active = false}" href="/book1/5-4"><Note/> Service-worker.js File</a>
+        <a on:click="{() => active = false}" href="/book1/5-5"><Note/> Deploy to Firebase Hosting</a>
+        <a on:click="{() => active = false}" href="/book1/5-6"><Note/> Command errors</a>
+        <a on:click="{() => active = false}" href="/book1/5-7"><Note/> Deploy to Netlify</a>
+        <a on:click="{() => active = false}" href="/book1/5-8"><Note/> Setup Git</a>
+        <a on:click="{() => active = false}" href="/book1/5-9"><Note/> Don't tell me i am wrong</a>
+        <a on:click="{() => active = false}" href="/book1/5-10"><Note/> Don't tell me i am wrong</a>
        
     </div>
 </Accordion>
 <Accordion><!-- 6 -->
-    <div slot="head"><span class="hn">06</span><span>Project Init</span></div>
+    <div slot="head"><span class="hn">06</span><span>Firebase Storage</span></div>
 	<div slot="details">
-
+        <a on:click="{() => active = false}" href="/book1/6-1"><Note/> Connect to Storage</a>
+<a on:click="{() => active = false}" href="/book1/6-2"><Note/> Add Manifest file</a>
+<a on:click="{() => active = false}" href="/book1/6-3"><Note/> Add App icons files</a>
+<a on:click="{() => active = false}" href="/book1/6-4"><Note/> Service-worker.js File</a>
+<a on:click="{() => active = false}" href="/book1/6-5"><Note/> Deploy to Firebase Hosting</a>
+<a on:click="{() => active = false}" href="/book1/6-6"><Note/> Command errors</a>
+<a on:click="{() => active = false}" href="/book1/6-7"><Note/> Deploy to Netlify</a>
+<a on:click="{() => active = false}" href="/book1/6-8"><Note/> Setup Git</a>
+<a on:click="{() => active = false}" href="/book1/6-9"><Note/> Don't tell me i am wrong</a>
+<a on:click="{() => active = false}" href="/book1/6-10"><Note/> Don't tell me i am wrong</a>
        
     </div>
 </Accordion>

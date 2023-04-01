@@ -5,6 +5,8 @@
     import {getFirestore, doc, onSnapshot } from "firebase/firestore";
     import Accordion from "../../Accordion.svelte";
 
+    
+
     const db = getFirestore(app);    
 
     let title
@@ -63,9 +65,6 @@
         });
     });
 </script>
-{#if title === undefined}
-    <div>dasdas</div>
-{/if}
 <div class="content-wrap">
     <div class="content-header">
         <div class="title">{title}</div>
