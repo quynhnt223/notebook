@@ -7,6 +7,8 @@
     let blob
     let downloadURL2
     const storage = getStorage(app);
+    let time
+   
     
     function uploadfile() {
     
@@ -41,6 +43,11 @@
                             
                             downloadURL2 = downloadURL
                             console.log(downloadURL2)
+                            document.getElementById("myaudio").load()
+                            .then (
+                                time = document.getElementById("myaudio").duration
+                            )
+                            
                             
                             });
                             
@@ -98,7 +105,8 @@
 		var o = document.createElement("audio");
 		o.controls = !0, o.src = URL.createObjectURL(e.data), r.appendChild(o), i.appendChild(r)
 	blob = e.data
-    uploadfile()
+    uploadfile()    
+   
     }
 
 	function t(e) {
@@ -141,6 +149,10 @@
     <ul id="list"></ul>
 </main>
 {downloadURL2}
+<h1>{time}</h1>
+<audio id="myaudio" controls >
+    <source type="audio/ogg"  src={downloadURL2}>   
+</audio>
 <style>
 *{padding:0;margin:0}a{color:#009387}a:visited{color:#930087}body{margin:1rem;font-family:sans-serif}main{max-width:28rem;margin:0 auto;position:relative}#controls{display:flex;margin-top:2rem}button{flex-grow:1;height:2.5rem;min-width:2rem;border:none;border-radius:.15rem;background:#00e5d2;margin-left:2px;box-shadow:inset 0 -.15rem 0 rgba(0,0,0,.2);cursor:pointer;display:flex;justify-content:center;align-items:center}button:focus,button:hover{outline:none;background:#00ffe9}button::-moz-focus-inner{border:0}button:active{box-shadow:inset 0 1px 0 rgba(0,0,0,.2);line-height:3rem}button:disabled{pointer-events:none;background:#d3d3d3}button:first-child{margin-left:0}button svg{transform:translateY(-.05rem);fill:#000;width:1.4rem}button:active svg{transform:translateY(0)}button:disabled svg{fill:#9a9a9a}button text{fill:#00e5d2}button:focus text,button:hover text{fill:#00ffe9}button:disabled text{fill:#d3d3d3}#formats,#mode{margin-top:.5rem;font-size:80%}#mode{float:right}#support{display:none;margin-top:2rem;color:red;font-weight:700}#list{margin-top:1.6rem}audio{display:block;width:100%;margin-top:.2rem}li{list-style:none;margin-bottom:1rem}
 </style>
