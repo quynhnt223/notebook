@@ -197,7 +197,7 @@ a{
     display: none;
     z-index: 99999999;
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
 }
 .navbar.active {
     display: block!important;

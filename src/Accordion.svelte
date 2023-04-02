@@ -28,10 +28,7 @@
           margin-bottom: 12px;
           margin-left: 12px;
           margin-right: 12px;  
-          background-color: #ECF0F3;
-    box-shadow: 0.2rem 0.2rem 0.4rem #c8d0e7, -1px -1px 2px 0px #FFFFFFF7;
-    border-top: solid 2px #fff;
-    border-left: solid 2px #fff;
+          background-color: #ECF0F3;    
     border-radius: 6px;
 }
 

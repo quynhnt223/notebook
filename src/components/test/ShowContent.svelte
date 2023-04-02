@@ -5,7 +5,8 @@
     import {getFirestore, doc, onSnapshot } from "firebase/firestore";
     import Accordion from "../../Accordion.svelte";
 
-    
+
+
 
     const db = getFirestore(app);    
 
@@ -35,7 +36,15 @@
 
     $afterPageLoad(page => { 
         const PageId = $url().split("/").pop()
-        const noteRef = doc(db, 'notes', PageId);    
+        const noteRef = doc(db, 'notes', PageId); 
+           
+    function loader(){
+    const loader = document.getElementById("loader")
+    loader.style.display = "block";  
+    
+ }
+ loader()
+       
         
         onSnapshot(noteRef, (doc) => {
             title = doc.data().title
@@ -59,12 +68,20 @@
             section07title =  doc.data().section07title
             section08title =  doc.data().section08title
             section09title =  doc.data().section09title
-            section10title =  doc.data().section10title            
+            section10title =  doc.data().section10title  
+            
+            function loader(){
+    const loader = document.getElementById("loader")
+    loader.style.display = "none";  
+    
+ }
+ loader()
                 
                 
         });
     });
 </script>
+<div id="loader"></div>
 <div class="content-wrap">
     <div class="content-header">
         <div class="title">{title}</div>
@@ -147,7 +164,7 @@ textarea:focus {
     right: 12px;
     border-radius: 6px;
     z-index: 999;
-    box-shadow: 0.2rem 0.2rem 0.4rem #c8d0e7, -1px -1px 2px 0px #FFFFFFF7;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -211,5 +228,15 @@ font-weight: 300;
 :global(body) {
     overflow: hidden!important;
 }
+}
+#loader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    background-color: #fff;
+    display: none;
 }
 </style>
